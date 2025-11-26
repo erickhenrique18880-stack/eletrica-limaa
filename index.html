@@ -5,126 +5,135 @@
   <title>Elétrica Lima</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+      font-family: 'Poppins', sans-serif;
     }
 
-    header {
-      background: #facc15;
-      color: #000;
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #1e293b;
-      border-radius: 10px;
-      box-shadow: 0px 0px 15px black;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #facc15;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: none;
-      font-size: 15px;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 20px;
-      padding: 12px;
-      background: #facc15;
-      color: black;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #eab308;
-    }
-
-    .whatsapp {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .whatsapp a {
-      color: #25d366;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #94a3b8;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581091215367-59ab6c16b02a?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
     }
   </style>
 </head>
-<body>
 
-  <header>
-    ⚡ Elétrica Lima ⚡
+<body class="bg-gray-900 text-white">
+
+  <!-- TOPO -->
+  <header class="bg-black p-6 flex justify-between items-center shadow-lg">
+    <h1 class="text-2xl font-bold text-yellow-400">⚡ Elétrica Lima</h1>
+    <a href="#contato" class="bg-yellow-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-500">
+      Pedir Serviço
+    </a>
   </header>
 
-  <div class="container">
-    <h2>Solicitar Manutenção Elétrica</h2>
-
-    <form action="https://formspree.io/f/mldkqaek" method="POST">
-
-      <label>Nome:</label>
-      <input type="text" name="nome" required>
-
-      <label>Telefone / WhatsApp:</label>
-      <input type="text" name="telefone" required>
-
-      <label>Email:</label>
-      <input type="email" name="email" required>
-
-      <label>Qual manutenção você precisa?</label>
-      <textarea name="mensagem" rows="4" required></textarea>
-
-      <button type="submit">Enviar Pedido</button>
-
-    </form>
-
-    <div class="whatsapp">
-      <p>Ou fale direto no WhatsApp:</p>
-      <a href="https://wa.me/5543988028222" target="_blank">📲 (43) 98802-8222</a>
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero min-h-[80vh] flex items-center justify-center text-center">
+    <div class="bg-black/80 p-8 rounded-2xl max-w-2xl">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-4">
+        Elétrica Lima
+      </h2>
+      <p class="text-lg mb-4">
+        Atendimento residencial, comercial e industrial em instalações e manutenção elétrica.
+      </p>
+      <p class="mb-6">
+        ⚡ Atendimento rápido <br>
+        ⚡ Serviço seguro e profissional <br>
+        ⚡ Orçamento sem compromisso
+      </p>
+      <a href="#contato" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500">
+        Solicitar Orçamento
+      </a>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    © 2025 - Elétrica Lima  
+  <!-- SOBRE -->
+  <section class="bg-gray-800 py-12 px-6 text-center">
+    <h2 class="text-3xl text-yellow-400 font-bold mb-6">Quem Somos</h2>
+    <p class="max-w-3xl mx-auto text-gray-300">
+      A <strong>Elétrica Lima</strong> é especializada em serviços elétricos residenciais,
+      comerciais e industriais. Trabalhamos com qualidade, segurança e responsabilidade,
+      sempre respeitando as normas técnicas e garantindo a satisfação do cliente.
+    </p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="py-12 px-6 bg-gray-900">
+    <h2 class="text-3xl text-center text-yellow-400 font-bold mb-10">Nossos Serviços</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">🔌 Instalações Elétricas</h3>
+        <p>Montagem de quadros, tomadas, iluminação e padrão de energia.</p>
+      </div>
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">⚡ Manutenção</h3>
+        <p>Disjuntores, curtos, tomadas queimadas, revisão elétrica geral.</p>
+      </div>
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">🏭 Industrial</h3>
+        <p>Manutenção em painéis, motores, comandos e sistemas industriais.</p>
+      </div>
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">💡 Iluminação</h3>
+        <p>Troca e instalação de luminárias LED e refletores.</p>
+      </div>
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">🏘️ Residencial</h3>
+        <p>Atendimento em casas e apartamentos com segurança.</p>
+      </div>
+
+      <div class="bg-black p-6 rounded-2xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-yellow-400">🏢 Comercial</h3>
+        <p>Instalações e manutenção em lojas, mercados e empresas.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section id="contato" class="bg-gray-800 py-12 px-6">
+    <h2 class="text-3xl text-center text-yellow-400 font-bold mb-6">
+      Solicitar Orçamento
+    </h2>
+
+    <form action="https://formspree.io/f/mldkqaek" method="POST"
+      class="max-w-xl mx-auto bg-black p-6 rounded-xl space-y-4 shadow-lg">
+
+      <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-3 rounded bg-gray-700">
+      <input type="text" name="telefone" placeholder="WhatsApp" required class="w-full p-3 rounded bg-gray-700">
+      <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-3 rounded bg-gray-700">
+      <textarea name="mensagem" rows="4" placeholder="Descreva o problema..." required class="w-full p-3 rounded bg-gray-700"></textarea>
+
+      <button type="submit" class="w-full bg-yellow-400 text-black py-3 rounded-lg font-bold hover:bg-yellow-500">
+        Enviar Pedido
+      </button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-black py-8 text-center">
+    <p class="text-yellow-400 font-bold text-lg mb-2">Elétrica Lima ⚡</p>
+    <p>📞 WhatsApp: (43) 98802-8222</p>
+    <p>📧 Atendimento via site direto no email</p>
+    <p class="text-sm text-gray-400 mt-4">© 2025 Elétrica Lima - Todos os direitos reservados</p>
   </footer>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/5543988028222" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-3 rounded-full shadow-lg">
+     📱 WhatsApp
+  </a>
 
 </body>
 </html>
